@@ -1,5 +1,4 @@
 # Dwrodri.blog
-Creator of Didakt, Ozone, and other overly ambitious projects you've never heard of.
 
 
 ## Why You should care about this blog
