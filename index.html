@@ -2,50 +2,105 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+  <link href="fonts/Computer Modern/Serif/cmun-serif.css" rel="stylesheet">
+  <link href="fonts/Computer Modern/Sans/cmun-sans.css" rel="stylesheet">
   <style media="screen">
-    * {
-      font-family: 'Titillium Web', sans-serif;
+  @keyframes color-change {
+    0% {
+      color: #fefefe;
+      background-color: #030303
     }
-    body{
-      margin:40px auto;
-      max-width:650px;
-      line-height:1.8;
-      font-size:18px;
-      color: #333333;
-      background-image: url("assets/space1.jpg");
-      font-weight: 400;
-      padding:10px;
-     }
-     h1,h2,h3,h4,h5{
-       color: #555555;
-       line-height: 1.0;
-     }
+    100% {
+      background-color: #fefefe;
+      color: #030303;
+    }
+  }
+  * {
+    font-family: 'Computer Modern Serif', serif;
+    font-stretch: normal;
+  }
+
+  .header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #030303;
+  }
+
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #fefefe;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  /* Change color on hover */
+  .topnav a:hover {
+    animation: color-change 1s;
+  }
+
+  p, ul{
+    line-height:1.8;
+    font-size: 18px;
+    color: #3e3e3e;
+    max-width: 650px;
+    margin: auto;
+  }
+
+  h1{
+    font-weight: normal;
+  }
+
+  h2,h3,h4,h5{
+    color: black;
+    line-height: 1.0;
+    font-weight: normal;
+    font-size: 28px;
+    margin: 40px auto;
+    max-width: 650px;
+  }
+
   </style>
   <title>Derek's Blog</title>
 </head>
+<div class="topnav">
+  <a href="index.hmtl">Latest</a>
+  <a href="mailto: dwrodri@g.clemson.edu">Contact</a>
+  <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+</div>
+
+<div class="header">
+    <h1><u>Dwrodri.blog</u></h1>
+</div>
 <body bgcolor=#fefefe>
-  <h1><u>Dwrodri.blog</u></h1>
 
-<h2>Why You should care about this blog</h2>
+  <h2>Why You should care about this blog</h2>
 
-<p>First off, if you're trying to hire me, <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf">here's my résumé</a>. For those of you who are just looking for reading material (how did you find this page already?), I'll do my best to tag and sort. I have no clue how frequent I'll be blogging at this point, that probably won't be a commitment I'll make for a long time. Odds are I'll write a book's worth one month and have two posts the next. My main focus throughout 2018 will be coding, not blogging, so most of my activity will be traceable through my <a href="https://github.com/dwrodri">GitHub</a>.</p>
+  <p>First off, if you're trying to hire me, <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf">here's my résumé</a>. For those of you who are just looking for reading material (how did you find this page already?), I'll do my best to tag and sort. I have no clue how frequent I'll be blogging at this point, that probably won't be a commitment I'll make for a long time. Odds are I'll write a book's worth one month and have two posts the next. My main focus throughout 2018 will be coding, not blogging, so most of my activity will be traceable through my <a href="https://github.com/dwrodri">GitHub</a>.</p>
 
-<h2>About Me</h2>
+  <h2>About Me</h2>
 
-<p>I was originally, born in Seattle, WA, but I was raised in Costa Rica. I've since returned to the US for my education. My main interests are:</p>
+  <p>I was originally, born in Seattle, WA, but I was raised in Costa Rica. I've since returned to the US for my education. My main interests are:</p>
 
-<ul>
-<li>Computational Intelligence</li>
-<li>Computer Security</li>
-<li>HPC</li>
-<li>Distributed Computing</li>
-<li>Game Programming</li>
-</ul>
+  <ul id="tags">
+    <li>Computational Intelligence</li>
+    <li>Computer Security</li>
+    <li>HPC</li>
+    <li>Distributed Computing</li>
+    <li>Game Programming</li>
+  </ul>
 
-<p>I intend for this blog to focus on just those interests–but who
-knows? If people actually start reading my stuff and are genuinely interested in
-my personal life, then I might start writing about the stuff I do in my free time
-that probably won't get me employed full-time.</p>
-</body>
-</html>
+  <p>I intend for this blog to focus on just those interests–but who
+    knows? If people actually start reading my stuff and are genuinely interested in
+    my personal life, then I might start writing about the stuff I do in my free time
+    that probably won't get me employed full-time.</p>
+  </body>
+  </html>
