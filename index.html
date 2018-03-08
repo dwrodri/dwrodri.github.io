@@ -1,106 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="../fonts/Computer Modern/Serif/cmun-serif.css">
+  <link rel="stylesheet" href="css/master.css" >
   <meta charset="utf-8">
-  <link href="fonts/Computer Modern/Serif/cmun-serif.css" rel="stylesheet">
-  <link href="fonts/Computer Modern/Sans/cmun-sans.css" rel="stylesheet">
-  <style media="screen">
-  @keyframes color-change {
-    0% {
-      color: #fefefe;
-      background-color: #030303
-    }
-    100% {
-      background-color: #fefefe;
-      color: #030303;
-    }
-  }
-  * {
-    font-family: 'Computer Modern Serif', serif;
-    font-stretch: normal;
-  }
-
-  .header {
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: hidden;
-    background-color: #030303;
-  }
-
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #fefefe;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin: 0 auto;
-  }
-
-  /* Change color on hover */
-  .topnav a:hover {
-    animation: color-change 1s;
-  }
-
-  p, ul{
-    line-height:1.8;
-    font-size: 18px;
-    color: #3e3e3e;
-    max-width: 650px;
-    margin: auto;
-  }
-
-  h1{
-    font-weight: normal;
-  }
-
-  h2,h3,h4,h5{
-    color: black;
-    line-height: 1.0;
-    font-weight: normal;
-    font-size: 28px;
-    margin: 40px auto;
-    max-width: 650px;
-  }
-
-  </style>
-  <title>Derek's Blog</title>
+  <title>dwrodri.blog</title>
 </head>
+<div class="header">
+    <h1><u>dwrodri.blo</u>g</h1>
+</div>
 <div class="topnav">
-  <a href="index.hmtl">Latest</a>
-  <a href="mailto: dwrodri@g.clemson.edu">Contact</a>
-  <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+  <nav>
+    <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+    <a href="/about.html">About</a>
+    <a href="/index.html">Latest Post</a>
+    <a href="mailto: dwrodri@g.clemson.edu">Email Me</a>
+    <a href="archive/archive_index.html">Archive</a>
+  </nav>
 </div>
 
-<div class="header">
-    <h1><u>Dwrodri.blog</u></h1>
-</div>
+
 <body bgcolor=#fefefe>
 
-  <h2>Why You should care about this blog</h2>
+  <h2>About this Website</h2>
 
-  <p>First off, if you're trying to hire me, <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf">here's my résumé</a>. For those of you who are just looking for reading material (how did you find this page already?), I'll do my best to tag and sort. I have no clue how frequent I'll be blogging at this point, that probably won't be a commitment I'll make for a long time. Odds are I'll write a book's worth one month and have two posts the next. My main focus throughout 2018 will be coding, not blogging, so most of my activity will be traceable through my <a href="https://github.com/dwrodri">GitHub</a>.</p>
+  <p> I've created this website as a place to talk about my work and what I've learned, what I've done, and what I plan to do. I've got a lot going on right now, so there will probably be very few updates until I really get the ball rolling. Until then, feel free to check out my latest cool find: <a href="https://news.ycombinator.com/item?id=16515299">VisiData</a>. I've posted the HN link because I thought the discussion provided more meaningful resources than the GitHub repo.</p>
 
-  <h2>About Me</h2>
+  <h3>What to Expect</h3>
 
-  <p>I was originally, born in Seattle, WA, but I was raised in Costa Rica. I've since returned to the US for my education. My main interests are:</p>
+  <p>Expect to see a lot about data science, deep learning, and visualizaition on here. The first write-up I plan to upload will be on a simple multi-layer perceptron I'm writing in C++. Occasionally, I might talk about some of my other technical interests, like computer security, distributed computing, game programming, and cryptocurrency (but there's already plenty written about that). I expect my future employment (whatever that may be) to involve a lot of writing, so I'm getting this off the ground  with the intent of resharpening my writing skills, as well as keeping a record of things that others might find interesting.</p>
+  <h2></h2>
+  <div class="bottom-bar">
 
-  <ul id="tags">
-    <li>Computational Intelligence</li>
-    <li>Computer Security</li>
-    <li>HPC</li>
-    <li>Distributed Computing</li>
-    <li>Game Programming</li>
-  </ul>
+  </div>
 
-  <p>I intend for this blog to focus on just those interests–but who
-    knows? If people actually start reading my stuff and are genuinely interested in
-    my personal life, then I might start writing about the stuff I do in my free time
-    that probably won't get me employed full-time.</p>
   </body>
+
   </html>

@@ -1,0 +1,67 @@
+@import "../fonts/Computer Modern/Serif/cmun-serif.css" cmun-serif;
+@import "../fonts/Computer Modern/Sans/cmun-sans.css" cmun-sans;
+
+@keyframes color-change {
+  0% {
+    color: #fefefe;
+    background-color: #030303
+  }
+  100% {
+    background-color: #fefefe;
+    color: #030303;
+  }
+}
+
+* {
+  font-family: 'Computer Modern Serif', serif;
+  font-stretch: normal;
+  box-sizing: content-box;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #030303;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #fefefe;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  animation: color-change 1s;
+}
+
+p, ul{
+  line-height:1.8;
+  font-size: 18px;
+  color: #3e3e3e;
+  max-width: 650px;
+  margin: auto;
+}
+
+h1{
+  font-weight: normal;
+}
+
+h2,h3,h4,h5{
+  color: black;
+  line-height: 1.0;
+  font-weight: normal;
+  font-size: 28px;
+  margin: 40px auto;
+  max-width: 650px;
+}
