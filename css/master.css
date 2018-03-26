@@ -1,17 +1,6 @@
 @import "../fonts/Computer Modern/Serif/cmun-serif.css" cmun-serif;
 @import "../fonts/Computer Modern/Sans/cmun-sans.css" cmun-sans;
 
-@keyframes color-change {
-  0% {
-    color: #fefefe;
-    background-color: #030303
-  }
-  100% {
-    background-color: #fefefe;
-    color: #030303;
-  }
-}
-
 * {
   font-family: 'Computer Modern Serif', serif;
   font-stretch: normal;
@@ -49,8 +38,12 @@ p, ul{
   line-height:1.8;
   font-size: 18px;
   color: #3e3e3e;
-  max-width: 650px;
+  max-width: 720px;
   margin: auto;
+}
+
+body{
+    background-color: #fafafa
 }
 
 h1{
@@ -61,7 +54,7 @@ h2,h3,h4,h5{
   color: black;
   line-height: 1.0;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 1.2;
   margin: 40px auto;
   max-width: 650px;
 }
