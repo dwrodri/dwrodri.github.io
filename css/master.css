@@ -37,7 +37,7 @@
   color: #030303
 }
 
-p, ul{
+p, ul, ol{
   line-height:1.8;
   font-size: 18px;
   color: #3e3e3e;
@@ -51,13 +51,28 @@ body{
 
 h1{
   font-weight: normal;
+  font-size: 36px;
 }
 
-h2,h3,h4,h5{
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+h4{
+    font-size: 24px;
+}
+
+h5{
+    font-size: 20px;
+}
+h2, h3,h4,h5{
   color: black;
   line-height: 1.0;
   font-weight: normal;
-  font-size: 1.2;
   margin: 32px auto;
   max-width: 720px;
 }

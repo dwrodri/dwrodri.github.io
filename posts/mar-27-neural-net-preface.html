@@ -1,4 +1,5 @@
-<html><html>
+<!DOCTYPE html>
+<html>
 <head>
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -18,7 +19,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="../fonts/Computer Modern/Serif/cmun-serif.css">
-  <link rel="stylesheet" href="css/master.css" >
+  <link rel="stylesheet" href="/css/master.css" >
   <meta charset="utf-8">
   <title>dwrodri.blog()</title>
 </head>
@@ -35,45 +36,59 @@
     <a href="archive/archive_index.html">Archive</a>
   </nav>
 </div>
-<body><h2>Modern Neural Networks in C++ for a College Sophomore, Part One: The Preface</h2>
-<p><em>Before I get started, I'd like to thank </em><a href="http://www.3blue1brown.com"><em>Grant Sanderson</em></a><em> and </em><a href="http://michaelnielsen.org/"><em>Michael Neilsen</em></a><em> for their work. They are the reason I was able to do any of this, so if you like what you see be sure to check them out.&nbsp;</em></p>
 
-<p><em>I'll be writing this over the course of several weeks. This installment focuses on the hands-off bits. If you're here to dive straight into code, skip the first two sections and go straight to part two.</em></p>
-<p><em>&nbsp;</em></p>
-<h3>Introduction</h3>
-<p>Over the course of the past several months, I have been working on writing a neural network in C++. It is one of the simplest kinds, the <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">multi-layer perceptron</a>. I wrote this code to familiarize myself with neural nets, and I'd like to share it with others so they can do the same. This essay will dissect my code piece by piece, and convey the basics of a multi-layer perceptron along the way. According to my text editor, I've gotten my writing style down to an eighth grade level. That said, prepare yourself to learn quite a bit if &nbsp;you're new to the world of deep learning.&nbsp;</p>
 
-<p>In my (brief) experience with NNs, it seems a lot more people care about conducting experiments with NNs than building them. I want to show how NNs can be as fascinating to software engineers as they are to data scientists. I started this project to become a better data scientist, but I ended up growing more as a software engineer. Over the course of development, I made a lot of design decisions which you wouldn't find in a typical class assignment. I want my code to highlight the importance of vector operations, but I don't want hide all the math in a CUDA kernel. I simplified my code for readability, but not so that it doesn't illustrate the complexity of designing modern NNs.&nbsp;</p>
+<body>
+    <h2>Modern Neural Networks in C++ for a College Sophomore, Part One: The Preface</h2>
 
-<p>You are in the right place if any of the following statements are true:</p>
-<ul>
-  <li>You're sick and tired of hearing the phrase "deep learning" and not knowing what it means.</li>
-  <li>You're a computer science student who has been searching for a NN tutorial that <em>doesn't</em> use Python.</li>
-  <li>You've written some code in C++ before and won't melt at the sight of the STL.</li>
-  <li>You're not the best at calculus or linear algebra, but enjoy programming.&nbsp;</li>
-</ul>
+    <p><em>Before I get started, I'd like to thank</em> <a href="http://www.3blue1brown.com"><em>Grant Sanderson</em></a> <em>and</em> <a href="http://michaelnielsen.org/"><em>Michael Neilsen</em></a> <em>for their work. They are the reason I was able to do any of this, so if you like what you see be sure to check them out.</em></p>
 
-<h3>Outline:</h3>
-<ol>
-  <li>Rant for context</li>
-  <li>Oh god, another MNIST tutorial?</li>
-</ol>
+    <p><em>I'll be writing this over the course of several weeks. This installment focuses on the hands-off bits. If you're here to dive straight into code, skip the first two sections and go straight to part two.</em></p>
 
-<h3>Rant for context</h3>
-<p>Research in neural networks has produced quite the razzle-dazzle over the course of the past twelve years or so. The emergence of the use of neural networks (abbreviated as NN hereon) has brought forth revolutions in several fields. NN research caught the world's attention when it <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">revolutionized the world of computer vision</a>. Since then, researchers have tried using NNs for everything from <a href="https://www.youtube.com/watch?v=VrgYtFhVGmg">generating photos of fake celebrities</a> to <a href="https://www.youtube.com/watch?v=MgowR4pq3e8">playing Go</a>. Recently, there has been a notable increase in good educational resources that cover NNs. As happy as I am to know there are more learning resources out there, I have some bones to pick with the current educational landscape:</p>
-<ol>
-  <li>Many learning resources like to drown you in dense formulas. Don't get me wrong, dense formulas are great at describing very complex relationships in a small amount of space on a sheet of paper. My problem with these formulas is that they are often too dense. They can be quite hard to decipher if you are not very familiar with calculus and linear algebra. I'd like to replace those formulas with animations.&nbsp;</li>
-  <li>I'm almost certain the most popular language for building NNs is <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=neural+network&amp;type=">Python</a>. NNs built in Python often hide all the impressive feats of software engineering in a library. I want to show you those engineering bits and how I chose to write them.</li>
-  <li>Everyone insists on starting with using a NN to classify handwritten digits in the MNIST dataset. I've dedicated an entire section to explaining the pros and cons of this approach. &nbsp;</li>
-</ol>
-<p>I should preface that my C++ experience is almost non-existent. Before this project, I was much more comfortable with Python, Java and C programming. I've done as much as I can to gravitate away from my C programming habits and let the advancements in modern C++ do their work. I plan to perform some extensive refactoring down the line, but to not let the perfect get in the way of the good I'm posting this now. If I can find the free time (read: motivation), I will translate this code to other languages as well. creating this neural network has been an amazing exercise for learning C++, and I've been meaning to learn Haskell and Golang.&nbsp;</p>
+    <h3>Introduction</h3>
 
-<p><em>TL;DR</em>: I wanted to learn a new programming language and there aren't many good tutorials on this stuff in C++, so I tried to make one.&nbsp;</p>
+    <p>Over the course of the past several months, I have been working on writing a neural network in C++. It is one of the simplest kinds, the <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">multi-layer perceptron</a>. I wrote this code to familiarize myself with neural nets, and I'd like to share it with others so they can do the same. This essay will dissect my code piece by piece, and convey the basics of a multi-layer perceptron along the way. According to my text editor, I've gotten my writing style down to an eighth grade level. That said, prepare yourself to learn quite a bit if  you're new to the world of deep learning. </p>
 
-<h3>Oh god, is this <em>another</em> MNIST tutorial?</h3>
-<h3><br></h3>
-<p>Every NN tutorial in the universe starts with the MNIST dataset. For the unitiated, the <a href="http://yann.lecun.com/exdb/mnist/index.html">MNIST dataset</a> is a selection of uniquely compressed hand-drawn images of numbers. The dataset is provided and hosted by Dr. Yann LeCun, a notable figure in the deep learning industry. <a href="http://www.ics.uci.edu/~welling/teaching/273ASpring09/lecun-89e.pdf">Dr. LeCun was one of the first researchers to show the power of NNs in the field of optical character recognition (OCR)</a>. The dataset is labeled in its entirety, and also split into training and &nbsp;test sets. At this point, I'd be surprised to find a data scientist who <em>hasn't </em>touched the MNIST dataset. The dataset has acquired its fame not only by association with Dr. LeCun. It is also due to the fact that OCR is one of the most straightforward problems that illustrates the <em>necessity</em> of something like a NN. People are entranced by the shiny reflective properties of a difficult and choose to look no further. But here's some food for thought&mdash;is a tutorial inherently <em>bad </em>if it doesn't focus on why it's necessary&nbsp;</p>
+    <p>In my (brief) experience with NNs, it seems a lot more people care about conducting experiments with NNs than building them. I want to show how NNs can be as fascinating to software engineers as they are to data scientists. I started this project to become a better data scientist, but I ended up growing more as a software engineer. Over the course of development, I made a lot of design decisions which you wouldn't find in a typical class assignment. I want my code to highlight the importance of vector operations, but I don't want hide all the math in a CUDA kernel. I simplified my code for readability, but not so that it doesn't illustrate the complexity of designing modern NNs. </p>
 
-<p>My main reason for objecting to using MNIST as a first step is that it's not simple enough. It's pointless for a mere mortal to try picturing what a graph would look like in 784-dimensional space.&nbsp;</p>
+    <p>You are in the right place if any of the following statements are true:</p>
 
-<p>Every tutorial that classifies MNIST isn't necessarily doomed for failure. In fact I credit <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">this video series</a> and <a href="http://neuralnetworksanddeeplearning.com/">this website</a> for making this entire work a reality. All my code is a bastardized translation of Michael Neislen's original Python code, with the occasional tweak's here and there. My main issue with MNIST classifiers is that they are too complicated to dissect. There's a reason so many tutorials that use this dataset have the same feel. If I'm going to do this right, there will be no hand-waving in my explanations&mdash;no variable unexplained, no function undeciphered.&nbsp;</p></body></html>
+    <ul>
+    <li>You're sick and tired of hearing the phrase "deep learning" and not knowing what it means.</li>
+    <li>You're a computer science student who has been searching for a NN tutorial that <em>doesn't</em> use Python.</li>
+    <li>You've written some code in C++ before and won't melt at the sight of the STL.</li>
+    <li>You're not the best at calculus or linear algebra, but enjoy programming. </li>
+    </ul>
+
+    <h3>Outline:</h3>
+
+    <ol>
+    <li>Rant for context</li>
+    <li>Oh god, another MNIST tutorial?</li>
+    </ol>
+
+    <h3>Rant for context</h3>
+
+    <p>Research in neural networks has produced quite the razzle-dazzle over the course of the past twelve years or so. The emergence of the use of neural networks (abbreviated as NN hereon) has brought forth revolutions in several fields. NN research caught the world's attention when it <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">revolutionized the world of computer vision</a>. Since then, researchers have tried using NNs for everything from <a href="https://www.youtube.com/watch?v=VrgYtFhVGmg">generating photos of fake celebrities</a> to <a href="https://www.youtube.com/watch?v=MgowR4pq3e8">playing Go</a>. Recently, there has been a notable increase in good educational resources that cover NNs. As happy as I am to know there are more learning resources out there, I have some bones to pick with the current educational landscape:</p>
+
+    <ol>
+    <li>Many learning resources like to drown you in dense formulas. Don't get me wrong, dense formulas are great at describing very complex relationships in a small amount of space on a sheet of paper. My problem with these formulas is that they are often too dense. They can be quite hard to decipher if you are not very familiar with calculus and linear algebra. I'd like to replace those formulas with animations. </li>
+    <li>I'm almost certain the most popular language for building NNs is <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=neural+network&amp;type=">Python</a>. NNs built in Python often hide all the impressive feats of software engineering in a library. I want to show you those engineering bits and how I chose to write them.</li>
+    <li>Everyone insists on starting with using a NN to classify handwritten digits in the MNIST dataset. I've dedicated an entire section to explaining the pros and cons of this approach.  </li>
+    </ol>
+
+    <p>I should preface that my C++ experience is almost non-existent. Before this project, I was much more comfortable with Python, Java and C programming. I've done as much as I can to gravitate away from my C programming habits and let the advancements in modern C++ do their work. I plan to perform some extensive refactoring down the line, but to not let the perfect get in the way of the good I'm posting this now. If I can find the free time (read: motivation), I will translate this code to other languages as well. creating this neural network has been an amazing exercise for learning C++, and I've been meaning to learn Haskell and Golang. </p>
+
+    <p><em>TL;DR</em>: I wanted to learn a new programming language and there aren't many good tutorials on this stuff in C++, so I tried to make one. </p>
+
+    <h3>Oh god, is this <em>another</em> MNIST tutorial?</h3>
+
+    <p>Every NN tutorial in the universe starts with the MNIST dataset. For the unitiated, the <a href="http://yann.lecun.com/exdb/mnist/index.html">MNIST dataset</a> is a selection of uniquely compressed hand-drawn images of numbers. The dataset is provided and hosted by Dr. Yann LeCun, a notable figure in the deep learning industry. <a href="http://www.ics.uci.edu/~welling/teaching/273ASpring09/lecun-89e.pdf">Dr. LeCun was one of the first researchers to show the power of NNs in the field of optical character recognition (OCR)</a>. The dataset is labeled in its entirety, and also split into training and  test sets. At this point, I'd be surprised to find a data scientist who <em>hasn't</em> touched the MNIST dataset. The dataset has acquired its fame not only by association with Dr. LeCun. It is also due to the fact that OCR is one of the most straightforward problems that illustrates the <em>necessity</em> of something like a NN. People are entranced by the shiny reflective properties of a difficult and choose to look no further. But here's some food for thought—is a tutorial inherently <em>bad</em> if it doesn't focus on why it's necessary </p>
+
+    <p>My main reason for objecting to using MNIST as a first step is that it's not simple enough. It's pointless for a mere mortal to try picturing what a graph would look like in 784-dimensional space. </p>
+
+    <p>Every tutorial that classifies MNIST isn't necessarily doomed for failure. In fact I credit <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">this video series</a> and <a href="http://neuralnetworksanddeeplearning.com/">this website</a> for making this entire work a reality. All my code is a bastardized translation of Michael Neislen's original Python code, with the occasional tweak's here and there. My main issue with MNIST classifiers is that they are too complicated to dissect. There's a reason so many tutorials that use this dataset have the same feel. If I'm going to do this right, there will be no hand-waving in my explanations—no variable unexplained, no function undeciphered.</p>
+
+</body>
+
+</html>
