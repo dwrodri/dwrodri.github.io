@@ -8,7 +8,7 @@
 }
 
 .header {
-  padding: 10px;
+  padding: 0Apx;
   text-align: center;
 }
 
@@ -27,11 +27,14 @@
   padding: 14px 16px;
   text-decoration: none;
   margin: 0 auto;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 /* Change color on hover */
 .topnav a:hover {
-  animation: color-change 1s;
+  background-color: #fefefe;
+  color: #030303
 }
 
 p, ul{
@@ -43,7 +46,7 @@ p, ul{
 }
 
 body{
-    background-color: #fafafa
+    background-color: #fefefe
 }
 
 h1{
@@ -55,6 +58,6 @@ h2,h3,h4,h5{
   line-height: 1.0;
   font-weight: normal;
   font-size: 1.2;
-  margin: 40px auto;
-  max-width: 650px;
+  margin: 32px auto;
+  max-width: 720px;
 }
