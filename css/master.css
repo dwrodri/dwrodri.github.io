@@ -51,7 +51,8 @@ p{
   color: #3e3e3e;
   max-width: 720px;
   margin: auto;
-  margin-bottom: 1.5em;
+  margin-bottom: .75em;
+  margin-top: .75em;
 }
 
 body{
