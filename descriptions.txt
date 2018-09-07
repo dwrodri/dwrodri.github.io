@@ -1,0 +1,41 @@
+Chronographic Roadmap for Deep Learning
+Machine Learning: The High Interest Credit Card of Technical Debt
+VisiData, quick CSV tweaking in the terminal.
+ Andrej Karpathy's arXiv Sanity Preserver
+Uber's Engineering blog
+ Dr. Karpathy's Blog
+DeepMind's Blog
+Zero to TensorFlow in 15 Hours.
+Dr. Ng's 2006 machine learning MOOC on Coursera
+Understanding Capsule Networks
+YouTube Channel of Aurelien Geron, former ML engineer at YouTube Paris. Amazing videos on Capsule Nets
+More Deep Learning Papers, updated every so often.
+Very thorough dissection of Nvidia's Volta architecture by Citadel, LLC.
+ Guide to Intel Intrinsics, a great UI design!
+Everything from NAND gates to making Tetris in one semester-long MOOC.
+Intel Programmer's Guide, YMMV
+YT series where a guy builds a CPU from scratch.
+ A Good ARM tutorial series
+ Operating Systems in Three "Easy" Pieces
+Communicating Sequential Processes by C.A.R. Hoare, one of the top authorities on concurrent programming.
+One of the most talented individuals who does dreamscenes and graphics programming hosts tutorials and slide decks on his personal website.
+Computer Science Illustrated by UC Berkley
+Handmade Hero: Watch and entire game get written live!
+Game Engine Architecture by Jason Gregory
+Amit Patel's game dev articles
+Quake III Arena Source Code (id does this with every game after some time)
+Riot Games engineering blog, their series on determinism is great!
+Confessions of UE4 Firefighter: Great list of things SWEs do wrong in game dev.
+Series of good introductory articles on texture mapping. Old (VERY old in computer years) but gold.
+Algebra, Topology, Differential Calculus, and Optimization Theory For Computer Science and Engineering
+The Matrix Calculus You Need For Deep Learning
+3Blue1Brown's Essence of Linear Algebra YouTube series.
+Latest GNU Compiler Collection manual PDF. Great for learning how to optimize for GCC/G++!
+My favorite lecture series on theoretical computability.
+HackerNews Classics
+Why Monet Never Used Black, and Why You Shouldn’t Either
+Master's Thesis on Options Pricing with a GPU
+Teach Yourself Programming in Ten Years
+VnPy - an open source trading platform. Website is in Mandarin.
+Class Handouts from one of my favorite CS professors.
+Apple's new UI font, on GitHub. My how the times have changed.

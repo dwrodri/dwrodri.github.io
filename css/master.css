@@ -1,8 +1,6 @@
-@import-"../fonts/Berthold-Akzidenz-Grotesk-BE/berthold-akzidenz-grotesk-be.css" akzidenz
-@import "../fonts/Computer Modern/Sans/cmun-sans.css" cmun-sans;
-
+@import "../fonts/Computer Modern/Serif/cmun-serif.css" cmun-sans;
 * {
-  font-family: 'Berthold Akzidenz Grotesk BE', sans-serif;
+  font-family: 'COmputer Modern Serif', serif;
   font-stretch: normal;
   box-sizing: content-box;
 }
