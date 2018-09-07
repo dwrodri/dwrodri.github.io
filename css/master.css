@@ -1,6 +1,6 @@
 @import "../fonts/Computer Modern/Serif/cmun-serif.css" cmun-sans;
 * {
-  font-family: 'COmputer Modern Serif', serif;
+  font-family: 'Computer Modern Serif', serif;
   font-stretch: normal;
   box-sizing: content-box;
 }
@@ -12,19 +12,21 @@
 
 /* Style the top navigation bar */
 .topnav {
+  display: flex;
   overflow: hidden;
   background-color: #030303;
+  align: center;
 }
 
 /* Style the topnav links */
 .topnav a {
   float: left;
-  display: block;
+  display: flex;
   color: #fefefe;
-  text-align: center;
-  padding: 14px 16px;
+  align: center;
+  position: relative;
+  padding: 16px 14px;
   text-decoration: none;
-  margin: 0 auto;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
@@ -35,7 +37,8 @@
   color: #030303
 }
 
- ul, ol{
+
+ul, ol{
   line-height:1.8;
   font-size: 18px;
   color: #3e3e3e;
@@ -52,6 +55,12 @@ p{
   margin: auto;
   margin-bottom: .75em;
   margin-top: .75em;
+}
+
+.topnav nav {
+  justify-content: center;
+  position: relative;
+  margin: auto;
 }
 
 body{
@@ -86,3 +95,4 @@ h2, h3,h4,h5{
   margin: 32px auto;
   max-width: 720px;
 }
+
