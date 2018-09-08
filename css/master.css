@@ -23,9 +23,12 @@
   float: left;
   display: flex;
   color: #fefefe;
-  align: center;
+  justify-content: space-around;
+  text-align: center;
   position: relative;
-  padding: 16px 14px;
+  min-width: 90px;
+  line-height: 48px;
+  min-height: 36px;
   text-decoration: none;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;

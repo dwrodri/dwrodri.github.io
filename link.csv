@@ -1,0 +1,41 @@
+https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap$,                                      	Chronographic Roadmap for Deep Learning
+https://research.google.com/pubs/pub43146.html$,	Machine Learning: The High Interest Credit Card of Technical Debt
+http://visidata.org/$,	VisiData, quick CSV tweaking in the terminal.
+http://www.arxiv-sanity.com/$,	 Andrej Karpathy's arXiv Sanity Preserver
+https://eng.uber.com/tag/uber-ai-labs/$,	Uber's Engineering blog
+https://medium.com/@karpathy/$,	 Dr. Karpathy's Blog
+https://deepmind.com/blog/$,	DeepMind's Blog
+https://developers.google.com/machine-learning/crash-course/$,	Zero to TensorFlow in 15 Hours.
+https://www.coursera.org/learn/machine-learning$,	Dr. Ng's 2006 machine learning MOOC on Coursera
+https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b$,       	Understanding Capsule Networks
+https://www.youtube.com/channel/UCCvGd1WBMpFQ_vtC89VF2qA$,	YouTube Channel of Aurelien Geron, former ML engineer at YouTube Paris. Amazing videos on Capsule Nets
+https://github.com/terryum/awesome-deep-learning-papers/blob/master/README.md$,	More Deep Learning Papers, updated every so often.
+https://arxiv.org/pdf/1804.06826.pdf$,	Very thorough dissection of Nvidia's Volta architecture by Citadel, LLC.
+https://software.intel.com/sites/landingpage/IntrinsicsGuide/#$,	 Guide to Intel Intrinsics, a great UI design!
+http://nand2tetris.org/$,	Everything from NAND gates to making Tetris in one semester-long MOOC.
+https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf$,	Intel Programmer's Guide, YMMV
+https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU$,	YT series where a guy builds a CPU from scratch.
+https://azeria-labs.com/writing-arm-assembly-part-1/$,	 A Good ARM tutorial series
+http://pages.cs.wisc.edu/~remzi/OSTEP/$,	 Operating Systems in Three "Easy" Pieces
+http://www.usingcsp.com/cspbook.pdf$,	Communicating Sequential Processes by C.A.R. Hoare, one of the top authorities on concurrent programming.
+http://iquilezles.org/www/index.htm$,	One of the most talented individuals who does dreamscenes and graphics programming hosts tutorials and slide decks on his personal website.
+http://csillustrated.berkeley.edu$,	Computer Science Illustrated by UC Berkley
+https://handmadehero.org/$,	Handmade Hero: Watch and entire game get written live!
+http://gameenginebook.com/$,	Game Engine Architecture by Jason Gregory
+https://www.redblobgames.com/$,	Amit Patel's game dev articles
+https://github.com/id-Software/Quake-III-Arena/tree/master/code/game$,	Quake III Arena Source Code (id does this with every game after some time)
+https://engineering.riotgames.com/$,	Riot Games engineering blog, their series on determinism is great!
+https://allarsblog.com/2018/03/16/confessions-of-an-unreal-engine-4-engineering-firefighter/$,	Confessions of UE4 Firefighter: Great list of things SWEs do wrong in game dev.
+http://chrishecker.com/Miscellaneous_Technical_Articles$,	Series of good introductory articles on texture mapping. Old (VERY old in computer years) but gold.
+https://www.cis.upenn.edu/~jean/math-basics.pdf$,	Algebra, Topology, Differential Calculus, and Optimization Theory For Computer Science and Engineering
+http://parrt.cs.usfca.edu/doc/matrix-calculus/index.html$,	The Matrix Calculus You Need For Deep Learning
+https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab$,	3Blue1Brown's Essence of Linear Algebra YouTube series.
+https://gcc.gnu.org/onlinedocs/gcc-7.3.0/gcc.pdf$,	Latest GNU Compiler Collection manual PDF. Great for learning how to optimize for GCC/G++!
+https://www.youtube.com/playlist?list=PL601FC994BDD963E4$,	My favorite lecture series on theoretical computability.
+http://jsomers.net/hn/$,	HackerNews Classics
+https://designforhackers.com/blog/impressionist-color-theory/$,	Why Monet Never Used Black, and Why You Shouldn’t Either
+http://www.cs.au.dk/~gerth/advising/thesis/claus-jespersen.pdf$,	Master's Thesis on Options Pricing with a GPU
+http://norvig.com/21-days.html$,	Teach Yourself Programming in Ten Years
+http://www.vnpy.org/$,	VnPy - an open source trading platform. Website is in Mandarin.
+https://people.cs.clemson.edu/~goddard/handouts/older.html$,	Class Handouts from one of my favorite CS professors.
+https://github.com/AppleDesignResources/SanFranciscoFont$,	Apple's new UI font, on GitHub. My how the times have changed.
