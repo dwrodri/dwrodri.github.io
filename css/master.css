@@ -1,12 +1,14 @@
-@import "../fonts/Computer Modern/Serif/cmun-serif.css" cmun-sans;
+@import "../fonts/Computer Modern/Serif/cmun-serif.css" fonts;
+
 * {
-  font-family: 'Computer Modern Serif', serif;
+  font-family: 'iA Duospace', serif;
   font-stretch: normal;
   box-sizing: content-box;
+  color: #454545;
 }
 
 .header {
-  padding: 0Apx;
+  padding: 0px;
   text-align: center;
 }
 
@@ -14,7 +16,7 @@
 .topnav {
   display: flex;
   overflow: hidden;
-  background-color: #030303;
+  background-color: #454545;
   align: center;
 }
 
@@ -29,6 +31,7 @@
   min-width: 90px;
   line-height: 48px;
   min-height: 36px;
+  font-size: 16px;
   text-decoration: none;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -37,14 +40,13 @@
 /* Change color on hover */
 .topnav a:hover {
   background-color: #fefefe;
-  color: #030303
+  color: #454545;
 }
 
 
 ul, ol{
   line-height:1.8;
   font-size: 18px;
-  color: #3e3e3e;
   max-width: 720px;
   margin: auto;
   margin-top: .75em;
@@ -53,7 +55,6 @@ ul, ol{
 p{
   line-height:1.8;
   font-size: 18px;
-  color: #3e3e3e;
   max-width: 720px;
   margin: auto;
   margin-bottom: .75em;
@@ -92,7 +93,6 @@ h5{
     font-style: italic;
 }
 h2, h3,h4,h5{
-  color: black;
   line-height: 1.0;
   font-weight: normal;
   margin: 32px auto;
