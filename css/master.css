@@ -1,4 +1,5 @@
-@import "../fonts/Computer Modern/Serif/cmun-serif.css" fonts;
+@import "fonts/iA-duospace/duospace.css" fonts;
+
 
 * {
   font-family: 'iA Duospace', serif;
