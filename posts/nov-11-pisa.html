@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="../fonts/iA-duospace/duospace.css">
+    <link rel="stylesheet" href="../css/master.css" >
+    <meta charset="utf-8">
+    <title>derek.blog()</title>
+</head>
+<div class="header">
+    <a href="/index.html"; style="color: #030303; text-decoration: none;"><h1><u>derek.blo</u>g();</h1></a>
+</div>
+<div class="topnav">
+    <nav>
+        <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+        <a href="../about.html">About</a>
+        <a href="../ideas.html">Projects</a>
+        <a href="../links.html">Links</a>
+        <a href="mailto: derek.rodriguez@pm.me">Email Me</a>
+        <a href="../archive/archive_index.html">Archive</a>
+    </nav>
+</div>
+<body><h2>Some Notes on the 2015 PISA Dataset</h2>
+
+    <p>PISA is the most comprehensive survey on the state of global education in the world. The publishing form OECD on the 2015 data alone are about 4846 pages long. If you're interested in fetching them yourself, I've bundled them into <a href="http://people.cs.clemson.edu/~dwrodri/pisa_2015_pubs.tar.gz">this tarball</a>. To avoid slogging through all that documentation, here are my notes on the dataset.</p>
+
+<h3>Observations about the data</h3>
+<ul>
+  <li>n=519,334 students for OECD students and n=28,266 students outside of OECD countries.</li>
+  <li>The scoring method is based on the assumption that "performance" is a continuous, latent variable. See the "Rasch Model" section Technical manual for more details.</li>
+  <li>Different students are given different questions. There are a lot of different questions, so at first glance it looks like the amount of responses for each question are low.&nbsp;</li>
+</ul>
+
+<h3>Notes on how PISA collects and analyzes data</h3>
+
+<ul>
+  <li>The 2015 PISA consisted of three cognitive assessments, and a background questionnaire.&nbsp;
+    <ul>
+      <li>The background questionnaire focuses on the living/education conditions.&nbsp;</li>
+      <li>The cognitive assessments focus on three categories: scientific literacy, mathematics, and reading.&nbsp;</li>
+    </ul>
+  </li>
+  <li>The assessment scale assigned a score of 500 to the average score across all OECD countries in 2000, makes each point worth .01 in standard score. Whatever performance back in 2000 determined that value of 500 continues to produce the same value on modern assessments, even though the true mean has slightly changed. This implies that their test results follow a normal distribution.&nbsp;</li>
+  <li><br></li>
+</ul>
+<h3>Notes on the files in the dataset</h3>
+<ul>
+  <li>There are summaries of the raw data from each questionnaire. On the PISA website these called compendia, and are in XLSX format. The compendia are an excelent starting point for getting a good overview of the data. In fact, if you are only planning on comparing country to country, this might be all you need. They also separate results from some surveys by gender, if that interests you.&nbsp;</li>
+  <li>The raw data is only offered in closed source formats (SAS and SPSS). This is quite inconvenient for people using Python and R. On the bright side, the open source community has built parsers for sas7bdat files that are quite good. I have had more success working with these sas7bdat files, but your mileage may vary.&nbsp;</li>
+  <li>Make sure to grab the codebooks for interpreting the results of each of the columns in the SAS7Bdat files.&nbsp;</li>
+  <li>The total size of the dataset is 8.5 gigabytes, which is quite large. If you are working with this data on a laptop, I would recommend starting with the non-OECD data. These are the files that have _CM2_ in their name. These are much smaller; trying to open a 4GB file on my laptop in VisiData gave me enough time to brew some coffee.</li>
+</ul></body></html>
