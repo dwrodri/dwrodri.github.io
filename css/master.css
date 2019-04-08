@@ -29,7 +29,7 @@
   justify-content: space-around;
   text-align: center;
   position: relative;
-  min-width: 90px;
+  min-width: 82px;
   line-height: 48px;
   min-height: 36px;
   font-size: 16px;
@@ -44,8 +44,11 @@
   color: #313131;
 }
 
-body {
-    padding-bottom: 16px;
+body,main {
+    max-width: 38rem;
+    padding: 2rem;
+    margin: auto;
+
 }
 ul, ol{
   line-height:1.8;
@@ -59,9 +62,6 @@ p,i,b{
   line-height:2.4;
   font-size: 18px;
   max-width: 720px;
-  margin: auto;
-  margin-bottom: .75em;
-  margin-top: .75em;
 }
 
 .topnav nav {
@@ -98,7 +98,6 @@ h5{
 h2, h3,h4,h5{
   line-height: 1.0;
   font-weight: normal;
-  margin: 32px auto;
   max-width: 720px;
 }
 
