@@ -45,7 +45,7 @@
 }
 
 body,main {
-    max-width: 38rem;
+    max-width: 42rem;
     padding: 2rem;
     margin: auto;
 
@@ -61,7 +61,6 @@ ul, ol{
 p,i,b{
   line-height:1.8;
   font-size: 18px;
-  max-width: 720px;
 }
 
 .topnav nav {
@@ -98,6 +97,5 @@ h5{
 h2, h3,h4,h5{
   line-height: 1.0;
   font-weight: normal;
-  max-width: 720px;
 }
 
