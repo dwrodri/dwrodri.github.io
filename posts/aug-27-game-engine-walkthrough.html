@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../fonts/iA-duospace/duospace.css">
+    <link rel="stylesheet" href="../css/master.css" >
+    <meta charset="utf-8">
+    <title>derek.blog()</title>
+</head>
+<div class="header">
+    <a href="/index.html"; style="color: #030303; text-decoration: none;"><h1><u>derek.blo</u>g();</h1></a>
+</div>
+<div class="topnav">
+    <nav>
+        <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+        <a href="../about.html">About</a>
+        <a href="../ideas.html">Projects</a>
+        <a href="../links.html">Links</a>
+        <a href="mailto: derek.rodriguez@pm.me">Email Me</a>
+        <a href="../archive/archive_index.html">Archive</a>
+    </nav>
+</div>
+<h2>Walking through everything that happens when the first scene is loaded in RPD</h2>
+
+<h3>inside main()</h3>
+
+<ol>
+<li>main() is called, and the JSON parser fetches the file passed in argv[1] </li>
+<li>The singleton containing the core game loop (EngineCore) is instantiated, and passed the "engine_core" chunk of the JSON blob.</li>
+<li>The EngineCore singleton kicks off the game loop by calling the Run() function.</li>
+</ol>
+
+<h3>Inside EngineCore.Run()</h3>
+
+<ol>
+<li>Once inside the Run() function, more singletons are spawned: Clock, RenderManager, InputManager, and PhysicsCore</li>
+<li>The Clock singleton is started with its Start() function.</li>
+<li>The first Scene--called <code>current_scene</code> is instantiated in the EngineCore. This Scene instanced is wrapped in a <code>std::unique_ptr</code>.</li>
+<li><code>current_scene</code> is configured by calling the configure() function, which is passed EngineCore's <code>initial_scene</code> member.</li>
+<li>A <code>std::queue</code> is created for the input data from a controller/keyboard/etc.</li>
+<li>The main game loop inside the EngineCore is entered. The loop exit logic is based on a bolean called <code>running</code>.</li>
+<li><strong>The input queue is assigned to be the output of the InputManager singleton's HandleInput() function</strong></li>
+<li>The game loop performs a check to see if there's an exit signal at the back of the input queue. If so, the clock is stopped, and the loop is exited.</li>
+<li>Assuming no exit signal, we collect the number of elapsed ticks from the Clock singleton.</li>
+<li><code>current_scene</code> is handed the input queue through the HandleInput function.</li>
+<li>If there this isn't the very first game tick(), we enter anothe control block where we delegate work to change game state.</li>
+<li>The <code>current_scene</code> instance calls its UpdateAll function, and recieves the number of ticks.</li>
+<li>The PhysicsCore singleton calls its CheckCollisions function, which receives the Actors, Props, and Stage from <code>current_scene</code>.</li>
+<li>We exit the control block checking for the first game tick, and tell the RenderManager singleton to clear the previous frame SDL Renderer.</li>
+<li><code>current_scene</code> calls the RenderAll() function, generating the next frame's worth of content for the RenderManager singleton.</li>
+<li>RengerManager's SceneToScreen() function is called, pushing that frame into the window. </li>
+<li>The core game loop ends.</li>
+</ol>
+
+<h3>Exiting Engine.Run(), back inside main()</h3>
+
+<ol>
+<li>main() calls EngineCore's Cleanup() function.</li>
+<li>The program exits.</li>
+</ol>
+</html>
