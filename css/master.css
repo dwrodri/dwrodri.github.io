@@ -1,101 +1,82 @@
-@import "../fonts/latin-modern/latin-modern.css";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
 
 
 * {
-  font-family: 'latin modern', serif;
-  font-stretch: normal;
-  box-sizing: content-box;
-  color: #313131;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #313e50;
 }
 
 .header {
   padding: 0px;
   text-align: center;
+  color: #313e50;
 }
 
 /* Style the top navigation bar */
 .topnav {
   display: flex;
   overflow: hidden;
-  background-color: #313131;
+  background-color: #313e50;
   align: center;
+  justify-content: center;
 }
 
+/*.topnav nav {
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+*/
 /* Style the topnav links */
 .topnav a {
   float: left;
   display: flex;
-  color: #fefefe;
+  color: #fffaf7;
   justify-content: space-around;
   text-align: center;
   position: relative;
   min-width: 82px;
   line-height: 48px;
   min-height: 36px;
-  font-size: 16px;
   text-decoration: none;
+  text-size-adjust: 150%;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
-/* Change color on hover */
+/* Change color of topnav on hover */
 .topnav a:hover {
-  background-color: #fefefe;
-  color: #313131;
+  background-color: #fffaf7;
+  color: #cc6600
 }
 
+/* Everything else is here */
 body,main {
-    max-width: 42rem;
-    padding: 2rem;
-    margin: auto;
-
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+  background-color: #fffaf7;
+  font-size: 115%;
 }
+
+a {
+  color: #cc6600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 ul, ol{
   line-height:1.8;
-  font-size: 18px;
-  max-width: 720px;
+  max-width: 42rem;
   margin: auto;
   margin-top: .75em;
 }
 
 p,i,b{
   line-height:1.8;
-  font-size: 18px;
 }
 
-.topnav nav {
-  justify-content: center;
-  position: relative;
-  margin: auto;
-}
-
-body{
-    background-color: #fefefe
-}
-
-h1{
-  font-weight: normal;
-  font-size: 48px;
-}
-
-h2{
-    font-size: 32px;
-}
-
-h3{
-    font-size: 28px;
-}
-
-h4{
-    font-size: 24px;
-}
-
-h5{
-    font-size: 20px;
-    font-style: italic;
-}
-h2, h3,h4,h5{
-  line-height: 1.0;
-  font-weight: normal;
-}
 
