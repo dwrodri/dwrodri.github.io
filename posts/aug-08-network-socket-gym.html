@@ -11,7 +11,7 @@
 </div>
 <div class="topnav">
     <nav>
-        <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Résumé</a>
+        <a href="https://people.cs.clemson.edu/~dwrodri/resume.pdf"> Resume</a>
         <a href="../about.html">About</a>
         <a href="../ideas.html">Projects</a>
         <a href="../links.html">Links</a>
@@ -19,7 +19,8 @@
         <a href="../archive/archive_index.html">Archive</a>
     </nav>
 </div>
-<h2 id="on-the-practicality-of-running-an-ai-gym-over-a-network-socket">On the practicality of running an AI Gym over a network socket</h1>
+<h2 id="on-the-practicality-of-running-an-ai-gym-over-a-network-socket">On the practicality of running an AI Gym over a network socket  </h1>
+<p><sub><i>  August 8th, 2018 - by Derek Rodriguez</i></sub></p>
 <p>A couple months ago I stumbled across <a href="http://cs230.stanford.edu/files_winter_2018/projects/6940282.pdf">this paper</a> and thought it was pretty cool. “Deep Q-Learning looks cool, let’s give it a go.” I thought to myself. Then I remembered I don’t have a colossal HPC cluster at my disposal to do things like <a href="https://blog.openai.com/openai-five/">make a DoTA 2 AI that goes toe-to-toe with the pros</a> and I got sad. &quot;Well, maybe I can offload the simulation of the card game to that Raspberry Pi I have sitting around and do all the learning on my desktop". Thus, the idea of an AI Gym with a socket interface was born.</p>
 <p><i>"That sounds like something OpenAI Gym already does by default. This isn’t new at all."</i></p>
 <p>You’re <a href="https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server">right</a>. There is no such thing as originality, everything new is old, no one is special and art is a lie. Before we get ahead of ourselves, let’s note that apparently in the age of smart thermostats, cloud-connected everything, and Docker witchcraft, OpenAI Gym instances <em>still run on locally on your machine</em>. In case you didn’t know, it takes a <strong>long</strong> time to send a packet over a network—in terms of CPU cycles, that is.</p>
