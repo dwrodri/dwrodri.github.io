@@ -29,8 +29,9 @@
   experience with was R. Let me clarify—R is a fantastic environment for
   statisticians to explore advanced computation methods on cleaned data. It is
   also a great environment for developing great insights on clean data using
-  their DataFrame type. If you haven't caught the hint yet, <strong>R is only
-  great if your data is already great</strong>.</p>
+  their DataFrame type. If you haven't caught the hint yet, <strong>R's true
+  potential is so much more immediate if your data is already
+  great</strong>.</p>
   <p>The sad reality of most exciting data science projects is that they more
   often than not aren't based on a clean, well-studied dataset. Thank God
   Tensorflow changed their default tutorial away from digit recognition,
@@ -39,19 +40,20 @@
   complaining about how much of data science is just cleaning data. You can add
   another half's worth of time for debugging your neural net, if you were
   coaxed into using one that isn't off-the-shelf.</p>
-  <p>In my experience, just about anything beats R when it comes to cleaning
-  dirty data. You can literally go from zero awk experience to a clean CSV in
-  less time than it takes to write an R script that parses the same
-  poorly-formatted plaintext source. Python's scientific libraries have stolen
-  R's DataFrame magic and even allowed for it to scale to multi-node
-  architectures. I used to resent R, it was shoved upon me as a strange tool
-  that promised to replace Python, but failed miserably.</p>
-  <p>Then I finally came to an important realization. R is a Unix tool. That's
-  all it is. I started treating it like awk or sed and suddenly it's great. It
-  blows my mind that isn't R isn't shown in this context more often. If R is
-  bad at cleaning your data, you can just clean it in awk and then just pipe to
-  R. I've actually reduced my R usage down to mostly just two aliases (written
-  here in fish syntax):</p>
+  <p>Half-assing something in Unix can produce great results as long you chose the
+  right half of the ass. Thirty mintues of of some good cURL mixed with awk
+  and/or some sed perform miracles on poorly-formatted plaintext source.
+  Python's scientific libraries (PySpark, pandas, etc.) do a decent job
+  of copying R's DataFrame magic and even allowed for it to scale to multi-node
+  architectures. That being said, ciriticizing R for all the awkwardness that
+  comes from a language developed by a bunch of a statisticians is absolutely
+  not the point of the post.</p>
+  <p>I came to an important realization. R is a Unix tool.
+  Throwing an R snippet into a command just like you would with awk or sed
+  opens a whole new world of possibility. It blows my mind that isn't R isn't
+  shown in this context more often. If R is bad at cleaning your data, you can
+  just clean it in awk and then just pipe to R. I've actually reduced my R
+  usage down to mostly just two aliases (written here in fish syntax):</p>
   <pre>
     alias stats 'Rscript -e "summary(as.numeric(readLines(\"stdin\")))"'   
     alias boxplot 'Rscript -e "boxplot(as.numeric(readLines(\"stdin\")))"'
@@ -67,10 +69,14 @@
 $   grep "Recovery time:" output.log | awk '{print $2}' | boxplot
 </pre>
   <p>No spinning up Rstudio. No messing with ggplot settings. No more
-  oh-my-god-why-how-do-I-just-get-this-into-a-list. Have you tried doing
-  advanced text file in work in R? Yeah, no. Just results that help you figure
-  stuff out. Just do all the cleaning and OS stuff in awk or Python.</p>
-  <p>Now R is great! I'd love it if people e-mail me some R snippets like the
-  one I shared here so I can add them to my running list.</p>
+  oh-my-god-why-how-do-I-just-get-this-into-a-list. Just results that help you
+  figure do some quick-and-dirty EDA. I'd love it if people e-mail me some R
+  snippets like the one I shared here so I can add them to my running list.</p>
+
+  <p><i>Update:</i> I got some really great feedback from this article on 
+  <a href="https://news.ycombinator.com/item?id=21183983">HN</a>. I've taken a 
+  stab at rewriting the post a little to emphasize the original intent of 
+  recontextualizing R as a great command-line tool, instead of as the core language
+  for a data science / statistics programming ecosystem.</p>
 </body>
 </html>
