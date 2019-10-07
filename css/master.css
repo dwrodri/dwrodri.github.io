@@ -79,8 +79,7 @@ p,i,b{
 
 pre,code{
   font-family: monospace;
-  background-color: #313e50;
-  color: #fffaf7;
+  background-color: #ccc8c4;
   line-height: 1.8;
   display: block
 }
