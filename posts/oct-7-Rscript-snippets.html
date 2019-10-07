@@ -53,8 +53,8 @@
   R. I've actualy reduced my R usage down to mostly just two aliases (written
   here in fish syntax):</p>
   <pre>
-alias stats 'Rscript -e "summary(as.numeric(readLines(\"stdin\")))"'   
-alias boxplot 'Rscript -e "boxplot(as.numeric(readLines(\"stdin\")))"'
+        alias stats 'Rscript -e "summary(as.numeric(readLines(\"stdin\")))"'   
+        alias boxplot 'Rscript -e "boxplot(as.numeric(readLines(\"stdin\")))"'
 </pre>
   <p>The first produces a quick numeric summary of a series of numbers on
   stdin. The second produces a boxplot with that same data in PDF format. For
@@ -64,7 +64,7 @@ alias boxplot 'Rscript -e "boxplot(as.numeric(readLines(\"stdin\")))"'
   it in a file called output.log. If I wanted a boxplot of the total recovery
   times, all I would have to do is:</p>
   <pre>
-grep "Recovery time:" output.log | awk '{print $2}' | boxplot
+$   grep "Recovery time:" output.log | awk '{print $2}' | boxplot
 </pre>
   <p>No spinning up Rstudio. No finnicking with ggplot settings. No more
   oh-my-god-why-how-do-I-just-get-this-into-a-list. Have you tried doing
