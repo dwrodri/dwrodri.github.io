@@ -21,12 +21,12 @@
     </nav>
   </div>
   <h2>R is a joy if you treat it like awk</h2>
-  <p><sup><i>Octoper 7th, 2019 - Derek Rodriguez</i></sup></p>
+  <p><sup><i>October 7th, 2019 - Derek Rodriguez</i></sup></p>
   <p>During my undergrad I took a data science class. It was a great class
   where we dove into topics such as EDA, lasso regression, SVMs,
   visualizations, and many other good things that other people across the
   Internet love to blog about ad nauseum. The one thing I had a terrible
-  experience with was R. Let me clarify—R is a fantastic envronment for
+  experience with was R. Let me clarify—R is a fantastic environment for
   statisticians to explore advanced computation methods on cleaned data. It is
   also a great environment for developing great insights on clean data using
   their DataFrame type. If you haven't caught the hint yet, <strong>R is only
@@ -50,7 +50,7 @@
   all it is. I started treating it like awk or sed and suddenly it's great. It
   blows my mind that isn't R isn't shown in this context more often. If R is
   bad at cleaning your data, you can just clean it in awk and then just pipe to
-  R. I've actualy reduced my R usage down to mostly just two aliases (written
+  R. I've actually reduced my R usage down to mostly just two aliases (written
   here in fish syntax):</p>
   <pre>
     alias stats 'Rscript -e "summary(as.numeric(readLines(\"stdin\")))"'   
@@ -59,14 +59,14 @@
   <p>The first produces a quick numeric summary of a series of numbers on
   stdin. The second produces a boxplot with that same data in PDF format. For
   example, let's say I've just bought a new server and I want to see how long
-  it takes to spin up a webapp after a crash. I would write a script that
+  it takes to spin up a web app after a crash. I would write a script that
   simulates a crash, and then logs the recovery time after each crash and saves
   it in a file called output.log. If I wanted a boxplot of the total recovery
   times, all I would have to do is:</p>
   <pre>
 $   grep "Recovery time:" output.log | awk '{print $2}' | boxplot
 </pre>
-  <p>No spinning up Rstudio. No finnicking with ggplot settings. No more
+  <p>No spinning up Rstudio. No messing with ggplot settings. No more
   oh-my-god-why-how-do-I-just-get-this-into-a-list. Have you tried doing
   advanced text file in work in R? Yeah, no. Just results that help you figure
   stuff out. Just do all the cleaning and OS stuff in awk or Python.</p>
