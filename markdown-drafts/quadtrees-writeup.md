@@ -29,14 +29,16 @@ NPCs can't walk.
 To build our quadtree, we would take the entire space, and separate it into four
 equally sized cells.  Each of those cells would have one of three values:
 
-- WHITE: The NPC will not collide with anything in this cell
-- BLACK: The NPC will collide with everything in this cell 
-- GRAY: The NPC will collide with at least something in this cell
+- FREE: The NPC will not collide with anything in this cell
+- TAKEN: The NPC will collide with everything in this cell 
+- MIXED: The NPC will collide with at least something in this cell
 
-Now that the cells have been classified, we break each GRAY cell into four more
+Now that the cells have been classified, we break each MIXED cell into four more
 cells for the second time and assign _those_ cells their corresponding values.
-We repeat this process of dividing up cells until there are no GRAY cells left,
-only BLACK and WHITE. 
+We repeat this process of dividing up cells until there are no MIXED cells left,
+only TAKEN and FREE. We can then quickly build paths from A to B through the 
+centroids of each cell. The video below demonstrates this in action:
+
 
 Each of these cells has an address. Since we produced these cells in fours, it
 makes the most sense to use a base-4 counting system for addressing.  Base-4 is
